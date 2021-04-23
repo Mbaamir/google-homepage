@@ -8,12 +8,31 @@
 <head>
     <style>
         #google-logo{
-            margin: 50px 550px 50px 550px;
+            margin: 50px 550px 10px 550px;
         }
 
-        #search-form{
-            margin: 20px 500px 20px 590px;
+        .search-form{
+            margin: 15px 590px 10px 420px;
         }
+
+        #search-box{
+            width:520px;
+            height: 35px;
+            border-style: solid;
+            border-radius: 30px;
+            border-width: thin;
+            border-top-color: lightgray;   
+            text-indent: 20px;
+        }
+
+        #search-box:focus
+        {
+            border-style: dotted;
+            outline:none;
+            text-align: justify;
+        }
+
+
     </style>
 </head>
 
@@ -24,8 +43,8 @@
             alt="Google Logo">   
         </div>
         
-         <form id="search-form">
-             <input type="text">
+         <form class="search-form">
+             <input id= search-box type="text">
          </form>
 
     </body>

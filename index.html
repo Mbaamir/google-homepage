@@ -32,16 +32,24 @@
             text-align: justify;
         }
         .navBox{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             list-style-type: none;
-            margin: 0 0 0 1010px;
-            padding: 0;
+            /* margin: 0 0 0 1010px; */
+            padding: 0;  /* 2. This removes the list bullet points*/
+            margin:0;
         }
         .navElements{
             background-color:rgb(253, 253, 253);
             padding: 7px;
-            display:inline;
+            /* display:inline;  1. If this is off, even if padding is 0 bullet points will appear *
+            Unneeded with flex
+            */
         }
         .navBarLinks{
+            font-family: Arial,sans-serif;
+            font-size: 13px;
             color:black;
             text-decoration: none;
         }
@@ -61,8 +69,6 @@
 
 
 
-
-
     </style>
 </head>
 
@@ -71,15 +77,26 @@
 
 <body>
     <header>
-        <ul class="navBox">
 
-        <li class="navElements"><a class="navBarLinks" href="">Gmail</a></li>
-        <li class="navElements"><a class="navBarLinks" href="">Images</a></li>
-        <li class="navElements"><svg id="circles-3x3"  focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></li> 
-        <li class="navElements"><input id="signInButton" type="button"  value="Sign In"></li>
+            <ul class="navBox">
+
+                <li class="navElements"><a class="navBarLinks" href="">Gmail</a></li>
+                <li class="navElements"><a class="navBarLinks" href="">Images</a></li>
+                <li class="navElements"> 
+                    <a class="navBarLinks" href="">
+                        <svg id="circles-3x3" focusable=false; viewBox="0 0 24 24">
+                            <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                            </path>
+                        </svg>
+                    </a>
+                </li> 
+                <li class="navElements"><input id="signInButton" type="button"  value="Sign In"></li>
+                
+            </ul>
             
+           
+       
 
-        </ul>
 
     </header>
 
@@ -92,6 +109,7 @@
          <form class="search-form">
              <input id= search-box type="text">
          </form>
+
     </main>
     </body>
 </html>

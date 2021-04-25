@@ -13,6 +13,15 @@
 
         .search-form{
             margin: 15px 590px 27px 430px;
+            position: relative;
+        }
+
+        #magnifying-glass{
+            position:absolute;
+            width: 20px;
+            top: 13px;
+            left: 15px;
+            opacity: 0.4;
         }
 
         #search-box{
@@ -21,16 +30,25 @@
             border-style: solid;
             border-radius: 30px;
             border-width: thin;
-            border-top-color: lightgray;   
-            text-indent: 20px;
+            border-color: lightgray;   
+            text-indent: 40px;
+            /* position: relative; I'm not sure why this is here */
         }
-
+       
+       #search-box:hover{
+        box-shadow: 0px 0px 2px 3px rgba(223,223,223, 0.5);
+        border-color: #dadce0;
+        padding: 1px;
+       }
+        
         #search-box:focus
         {
-            border-style: dotted;
+            border-style: solid;
             outline:none;
             text-align: justify;
         }
+        
+
         .navBox{
             display: flex;
             justify-content: flex-end;
@@ -40,6 +58,7 @@
             padding: 0;  /* 3. This removes the list bullet points*/
             margin:0;
         }
+
         .navElements{
             background-color:rgb(253, 253, 253);
             padding: 7px;
@@ -68,10 +87,16 @@
         }
 
         #circles-3x3{
-            position:relative;
-            width:25px;
-            margin-left: 6px;
-            margin-right: 4px;
+            /* position:relative; */
+            width: 25px;
+            padding: 7px;
+            margin-left: 1px;
+            margin-right: 0px;
+        }
+
+        #circles-3x3:hover{
+            background-color:rgba(231, 231, 231,0.4);
+            border-radius:50%;
         }
 
         .search-buttons{
@@ -80,6 +105,7 @@
             padding: 2px;
             margin-inline: 8px;
             color:rgb(35,35,35);
+            /* color:hotpink; */
             background-color: #f8f9fa;
             border: solid;
             border-width: 1px;
@@ -102,19 +128,21 @@
         .Pakistan-bar{
             display: flex;
             justify-content: flex-start;
-            padding-left: 14px;
-            margin: 250px 0 0 0;
+            padding-left: 18px;
+            margin: 230px 0 0 0;
             background-color: #f2f2f2;
             color:#70757a;
             font-size: 14px;
             font-family: Arial, Sans-serif;
-
+            border: solid;
+            border-width: 0 0 1px 0;
+            border-color: #D5D5D5;
         }
 
         .bottom-links-list{
             display: flex;
             padding:0;
-            margin:5px 0 0 0;
+            margin: 1px 0 0 10px;
             height:40px;
             background-color: #f2f2f2;
             color:#70757a;
@@ -129,13 +157,23 @@
         }
 
         .bottomRight-list-item{
-            padding: 14px;
+            padding-left: 14px;
         }
 
         #bottomRight-first-Item{
             margin-left: auto;
         }
 
+        #bottomRightmost-item{
+            padding-right: 24px;
+        }
+
+        .Bottom-bar-links{
+            font-family: Arial,sans-serif;
+            font-size: 14px;
+            color:#70757a;
+            text-decoration: none;
+        }
 
 
     </style>
@@ -169,8 +207,16 @@
         </div>
         
          <form class="search-form">
-             <input id= search-box type="text">
+           
+            <input id= search-box type="text">
+             <svg id="magnifying-glass" focusable="false" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24">
+               <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+           </svg>
+
          </form>
+
 
 <div class="search-buttons-box">
     <input class="search-buttons" type="button" value="Google Search"></input>
@@ -185,18 +231,15 @@
         </div>
 
 <ul class="bottom-links-list">
-    <li class="bottomLeft-list-item">About</li>
-    <li class="bottomLeft-list-item">Advertising</li>
-    <li class="bottomLeft-list-item">Business</li>
-    <li class="bottomLeft-list-item">How Search Works</li>
+    <li class="bottomLeft-list-item"><a href="" class="Bottom-bar-links">About</a></li>
+    <li class="bottomLeft-list-item"><a href="" class="Bottom-bar-links">Advertising</a></li>
+    <li class="bottomLeft-list-item"><a href="" class="Bottom-bar-links">Business</a></li>
+    <li class="bottomLeft-list-item"><a href="" class="Bottom-bar-links">How Search Works</a></li>
 
-    <li id="bottomRight-first-Item" class="bottomRight-list-item">Privacy</li>
-    <li class="bottomRight-list-item">Terms</li>
-    <li class="bottomRight-list-item">Settings</li>
-
+    <li id="bottomRight-first-Item"><a href="" class="Bottom-bar-links">Privacy</a></li>
+    <li class="bottomRight-list-item"><a href="" class="Bottom-bar-links">Terms</a></li>
+    <li id="bottomRightmost-item" class="bottomRight-list-item" ><a href="" class="Bottom-bar-links">Settings</a></li>
 </ul>
-
-
     </footer>
 
 </body>

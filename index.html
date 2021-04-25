@@ -8,16 +8,16 @@
 <head>
     <style>
         #google-logo{
-            margin: 30px 550px 10px 550px;
+            margin: 15px 550px 10px 550px;
         }
 
         .search-form{
-            margin: 15px 590px 10px 430px;
+            margin: 15px 590px 27px 430px;
         }
 
         #search-box{
-            width:520px;
-            height: 35px;
+            width:550px;
+            height: 40px;
             border-style: solid;
             border-radius: 30px;
             border-width: thin;
@@ -65,9 +65,35 @@
         #circles-3x3{
             position:relative;
             width:25px;
+            margin-left: 6px;
+            margin-right: 4px;
         }
 
+        .search-buttons{
+            width: 130px;
+            height: 35px;
+            padding: 2px;
+            margin-inline: 8px;
+            color:rgb(35,35,35);
+            background-color: #f8f9fa;
+            border: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            border-color:#f8f9fa;
+            font-family: arial,sans-serif;
+        }
 
+        .search-buttons:hover{
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            border-color: #dadce0;
+        }
+
+        .search-buttons-box{
+            display:flex;
+            justify-content: center;
+
+        }
 
     </style>
 </head>
@@ -95,8 +121,6 @@
             </ul>
             
            
-       
-
 
     </header>
 
@@ -109,6 +133,10 @@
          <form class="search-form">
              <input id= search-box type="text">
          </form>
+<div class="search-buttons-box">
+    <input class="search-buttons" type="button" value="Google Search"></input>
+    <input class="search-buttons" type="button" value="I'm Feeling Lucky"></input>
+</div>
 
     </main>
     </body>
